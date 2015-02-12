@@ -1,6 +1,7 @@
 ;; GO
 (add-hook 'go-mode-hook (lambda ()
 													(go-eldoc-setup)
+													(flycheck-mode)
 													(require 'go-projectile)
 													(setq gofmt-command "goimports")
 													(add-hook 'before-save-hook 'gofmt-before-save)
